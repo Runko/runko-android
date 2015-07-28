@@ -2,13 +2,13 @@
 
 ## Asennustiedoston luominen:
 
-RunkoAndroidApp-hakemistossa
+RunkoAndroidApp-hakemistossa suorita
 
-#### Linuxilla:
-$ chmod +x gradlew
-$ ./gradlew assembleDebug
+#### Linuxilla
+> chmod +x gradlew
+> ./gradlew assembleDebug
 
-#### Winulla:
+#### Winulla
 > gradlew.bat assembleDebug
 
 APK-asennustiedosto rakentuu tällöin hakemistoon RunkoAndroidApp/app/build/outputs/apk/ ja sen voi esim. mailata itselleen ja avata Android-puhelimella, jolloin asennus käynnistynee automaattisesti!
