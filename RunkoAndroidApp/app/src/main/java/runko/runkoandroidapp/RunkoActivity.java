@@ -5,6 +5,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.SpinnerAdapter;
+import android.widget.ArrayAdapter;
 
 public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
 

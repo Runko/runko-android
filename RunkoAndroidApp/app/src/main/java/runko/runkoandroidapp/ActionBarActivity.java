@@ -3,6 +3,11 @@ package runko.runkoandroidapp;
 /**
  * Created by evly on 28/07/15.
  */
+
+import android.widget.SpinnerAdapter;
+import android.widget.ArrayAdapter;
+
+
 public class ActionBarActivity {
     public static void openFavorites() {
     }

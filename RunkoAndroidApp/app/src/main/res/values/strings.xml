@@ -8,4 +8,15 @@
     <string name="action_user">User</string>
     <string name="action_fav">Favorites</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="action_sign_in">Kirjautuminen</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_luo_sisalto">Luo Sisältö</string>
+    <string name="action_luo_alue">Luo Sisältöalue</string>
+    <string name="action_suosikit">Suosikit</string>
+    <string name="action_tilaukset">Tilaukset</string>
+    <string name="action_haku">Haku</string>
+    <string name="action_tallennukset">Tallennukset</string>
+    <string name="action_ilmoitukset">Ilmoitukset</string>
+    <string name="action_omat_sisällöt">Omat Sisällöt</string>
+    <string name="action_settings">Asetukset</string>
 </resources>
