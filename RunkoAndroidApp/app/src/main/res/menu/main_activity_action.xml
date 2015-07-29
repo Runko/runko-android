@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:runkoapp="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_main_window"
+        android:icon="@drawable/rabbit50"
+        android:title="@string/app_name"
+        runkoapp:showAsAction="always" />
+
+    <item android:id="@+id/action_content"
+        android:icon="@drawable/content"
+        android:title="@string/action_content"
+        runkoapp:showAsAction="always" />
+
+    <item android:id="@+id/action_manager"
+        android:icon="@drawable/manager"
+        android:title="@string/action_manager"
+        runkoapp:showAsAction="always" />
+
+    <item android:id="@+id/action_user"
+        android:icon="@drawable/user50"
+        android:title="@string/action_user"
+        runkoapp:showAsAction="always" />
+
+</menu>
