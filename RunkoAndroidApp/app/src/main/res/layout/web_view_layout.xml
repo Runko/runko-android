@@ -3,17 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
+
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar_layout" />
-    <EditText
-        android:id="@+id/edit_message"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="@string/edit_message"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_send"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <WebView
+            android:id="@+id/web_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </WebView>
+    </ScrollView>
 </LinearLayout>

@@ -5,6 +5,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.webkit.WebView;
 import android.widget.SpinnerAdapter;
 import android.widget.ArrayAdapter;
 
@@ -17,6 +18,10 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        WebView webView = (WebView) findViewById(R.id.web_frame);
+        //webView.loadUrl("https://runko.herokuapp.com");
+        webView.loadUrl("file:///android_asset/testiHTML.html");
     }
 
     @Override
