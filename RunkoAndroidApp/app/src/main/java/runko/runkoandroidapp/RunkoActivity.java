@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 
 public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
 
+    private WebView myWebView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +21,11 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        WebView webView = (WebView) findViewById(R.id.web_frame);
-        //webView.loadUrl("https://runko.herokuapp.com");
-        webView.loadUrl("file:///android_asset/testiHTML.html");
+        myWebView = (WebView) findViewById(R.id.web_frame);
+       // myWebView.getSettings().setJavaScriptEnabled(true);
+        //myWebView.getSettings().setLoadWithOverviewMode(true);
+        //myWebView.getSettings().setUseWideViewPort(true);
+        myWebView.loadUrl("runko.herokuapp.com");
     }
 
     @Override
@@ -57,3 +61,4 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
             }
     }
 }
+
