@@ -1,5 +1,6 @@
 package runko.runkoandroidapp;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -9,10 +10,11 @@ import android.webkit.WebView;
 import android.view.Display;
 import android.view.WindowManager;
 import android.content.Context;
+import android.widget.LinearLayout;
 import android.widget.SpinnerAdapter;
 import android.widget.ArrayAdapter;
 
-public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
+public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
 
     private WebView myWebView;
 
@@ -33,7 +35,17 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
 
 
     }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
 
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.web_view_layout);
+
+        } else {
+            setContentView(R.layout.web_view_layout);
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -49,46 +61,46 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
 
-            switch (item.getItemId()) {
-                case R.id.action_main_window:
-                    myWebView.loadUrl("http://runko.herokuapp.com");
-                    return true;
-                case R.id.action_suosikit:
-                    //puuttuu...
-                    return true;
-                case R.id.action_tilaukset:
-                    //puuttuu...
-                    return true;
-                case R.id.action_haku:
-                    //puuttuu...
-                    return true;
-                case R.id.action_tallennukset:
-                    //puuttuu
-                    return true;
-                case R.id.action_ilmoitukset:
-                    //puuttuu
-                    return true;
-                case R.id.action_luo_sisalto:
-                    myWebView.loadUrl("https://runko.herokuapp.com/content/simpleform");
-                    return true;
-                case R.id.action_luo_alue:
-                    myWebView.loadUrl("https://runko.herokuapp.com/area/areaform");
-                    return true;
-                case R.id.action_omat_sisallot:
-                    //puuttuu...
-                    return true;
-                case R.id.action_sign_in:
-                    myWebView.loadUrl("https://runko.herokuapp.com/login");
-                    return true;
-                case R.id.action_profile:
-                    //puuttuuu....
-                    return true;
-                case R.id.action_settings:
-                    //puuttuu...
-                    return true;
-                default:
-                    return super.onOptionsItemSelected(item);
-            }
+        switch (item.getItemId()) {
+            case R.id.action_main_window:
+                myWebView.loadUrl("http://runko.herokuapp.com");
+                return true;
+            case R.id.action_suosikit:
+                //puuttuu...
+                return true;
+            case R.id.action_tilaukset:
+                //puuttuu...
+                return true;
+            case R.id.action_haku:
+                //puuttuu...
+                return true;
+            case R.id.action_tallennukset:
+                //puuttuu
+                return true;
+            case R.id.action_ilmoitukset:
+                //puuttuu
+                return true;
+            case R.id.action_luo_sisalto:
+                myWebView.loadUrl("https://runko.herokuapp.com/content/simpleform");
+                return true;
+            case R.id.action_luo_alue:
+                myWebView.loadUrl("https://runko.herokuapp.com/area/areaform");
+                return true;
+            case R.id.action_omat_sisallot:
+                //puuttuu...
+                return true;
+            case R.id.action_sign_in:
+                myWebView.loadUrl("https://runko.herokuapp.com/login");
+                return true;
+            case R.id.action_profile:
+                //puuttuuu....
+                return true;
+            case R.id.action_settings:
+                //puuttuu...
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

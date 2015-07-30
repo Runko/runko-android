@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:runkoapp="http://schemas.android.com/apk/res-auto">
 
+
     <item android:id="@+id/action_main_window"
         android:icon="@drawable/rabbit50"
         android:title="@string/app_name"
@@ -58,6 +59,7 @@
 
     <item android:id="@+id/action_user"
         android:icon="@drawable/user50"
+
         android:title="@string/action_user"
         runkoapp:showAsAction="always" >
         <menu>
@@ -75,5 +77,4 @@
                 runkoapp:showAsAction="never"/>
         </menu>
     </item>
-
 </menu>
