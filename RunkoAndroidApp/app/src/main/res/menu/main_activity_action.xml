@@ -50,7 +50,7 @@
                 android:title="@string/action_luo_alue"
                 runkoapp:showAsAction="never"/>
             <item
-                android:id="@+id/action_omat_sisällöt"
+                android:id="@+id/action_omat_sisallot"
                 android:title="@string/action_omat_sisällöt"
                 runkoapp:showAsAction="never"/>
         </menu>

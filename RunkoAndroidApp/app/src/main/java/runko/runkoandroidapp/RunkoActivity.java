@@ -27,7 +27,6 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
         myWebView = (WebView) findViewById(R.id.web_frame);
         myWebView.setPadding(0, 0, 0, 0);
         myWebView.setInitialScale(1);
-        myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.getSettings().setLoadWithOverviewMode(true);
         myWebView.getSettings().setUseWideViewPort(true);
         myWebView.loadUrl("http://runko.herokuapp.com");
@@ -52,16 +51,40 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
 
             switch (item.getItemId()) {
                 case R.id.action_main_window:
-                    ActionBarActivity.gotoMain();
+                    myWebView.loadUrl("http://runko.herokuapp.com");
                     return true;
-                case R.id.action_content:
-                    ActionBarActivity.openContent();
+                case R.id.action_suosikit:
+                    //puuttuu...
                     return true;
-                case R.id.action_manager:
-                    ActionBarActivity.openManager();
+                case R.id.action_tilaukset:
+                    //puuttuu...
                     return true;
-                case R.id.action_user:
-                    ActionBarActivity.openUserSettings();
+                case R.id.action_haku:
+                    //puuttuu...
+                    return true;
+                case R.id.action_tallennukset:
+                    //puuttuu
+                    return true;
+                case R.id.action_ilmoitukset:
+                    //puuttuu
+                    return true;
+                case R.id.action_luo_sisalto:
+                    myWebView.loadUrl("https://runko.herokuapp.com/content/simpleform");
+                    return true;
+                case R.id.action_luo_alue:
+                    myWebView.loadUrl("https://runko.herokuapp.com/area/areaform");
+                    return true;
+                case R.id.action_omat_sisallot:
+                    //puuttuu...
+                    return true;
+                case R.id.action_sign_in:
+                    myWebView.loadUrl("https://runko.herokuapp.com/login");
+                    return true;
+                case R.id.action_profile:
+                    //puuttuuu....
+                    return true;
+                case R.id.action_settings:
+                    //puuttuu...
                     return true;
                 default:
                     return super.onOptionsItemSelected(item);
