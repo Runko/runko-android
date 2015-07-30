@@ -6,6 +6,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.view.Display;
+import android.view.WindowManager;
+import android.content.Context;
 import android.widget.SpinnerAdapter;
 import android.widget.ArrayAdapter;
 
@@ -22,10 +25,14 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
         setSupportActionBar(toolbar);
 
         myWebView = (WebView) findViewById(R.id.web_frame);
-       // myWebView.getSettings().setJavaScriptEnabled(true);
-        //myWebView.getSettings().setLoadWithOverviewMode(true);
-        //myWebView.getSettings().setUseWideViewPort(true);
-        myWebView.loadUrl("runko.herokuapp.com");
+        myWebView.setPadding(0, 0, 0, 0);
+        myWebView.setInitialScale(1);
+        myWebView.getSettings().setJavaScriptEnabled(true);
+        myWebView.getSettings().setLoadWithOverviewMode(true);
+        myWebView.getSettings().setUseWideViewPort(true);
+        myWebView.loadUrl("http://runko.herokuapp.com");
+
+
     }
 
     @Override
@@ -60,5 +67,6 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity {
                     return super.onOptionsItemSelected(item);
             }
     }
+
 }
 
