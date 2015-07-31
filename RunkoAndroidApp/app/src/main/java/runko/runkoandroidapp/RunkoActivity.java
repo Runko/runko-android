@@ -18,6 +18,10 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
 
     private WebView myWebView;
 
+    /**
+     * When application starts and every time cofiguration changes webframe and  toolbar are rendered
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,20 +36,13 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
         myWebView.getSettings().setLoadWithOverviewMode(true);
         myWebView.getSettings().setUseWideViewPort(true);
         myWebView.loadUrl("http://runko.herokuapp.com");
-
-
     }
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
 
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setContentView(R.layout.web_view_layout);
-
-        } else {
-            setContentView(R.layout.web_view_layout);
-        }
-    }
+    /**
+     * Returns activity bar
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -55,6 +52,11 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
         return super.onCreateOptionsMenu(menu);
     }
 
+    /**
+     * Returns view on selected activity bar's menu items
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
