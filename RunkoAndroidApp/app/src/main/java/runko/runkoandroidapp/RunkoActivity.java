@@ -95,7 +95,7 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
                 myWebView.loadUrl("https://runko.herokuapp.com/login");
                 return true;
             case R.id.action_profile:
-                //puuttuuu....
+                myWebView.loadUrl("http://runko.herokuapp.com/persons/profile");
                 return true;
             case R.id.action_settings:
                 //puuttuu...
