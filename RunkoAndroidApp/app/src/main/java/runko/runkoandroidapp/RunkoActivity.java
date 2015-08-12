@@ -40,11 +40,11 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
 
         myWebView.setWebViewClient(new WebViewClient() {
             @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url){
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 return false;
             }
         });
-
+        myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.loadUrl("http://runko.herokuapp.com");
     }
 
@@ -76,7 +76,7 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
 
         switch (item.getItemId()) {
             case R.id.action_main_window:
-                myWebView.loadUrl("http://runko.herokuapp.com");
+                myWebView.loadUrl("http://runko.herokuapp.com/frontpage");
                 return true;
             case R.id.action_suosikit:
                 //puuttuu...
@@ -100,7 +100,7 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
                 myWebView.loadUrl("https://runko.herokuapp.com/area/areaform");
                 return true;
             case R.id.action_omat_sisallot:
-                //puuttuu...
+                myWebView.loadUrl("http://runko.herokuapp.com/persons/CM");
                 return true;
             case R.id.action_sign_in:
                 myWebView.loadUrl("https://runko.herokuapp.com/login");
