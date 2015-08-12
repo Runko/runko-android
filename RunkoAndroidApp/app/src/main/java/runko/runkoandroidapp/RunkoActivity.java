@@ -10,6 +10,7 @@ import android.webkit.WebView;
 import android.view.Display;
 import android.view.WindowManager;
 import android.content.Context;
+import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 import android.widget.SpinnerAdapter;
 import android.widget.ArrayAdapter;
@@ -17,6 +18,7 @@ import android.widget.ArrayAdapter;
 public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
 
     private WebView myWebView;
+
 
     /**
      * When application starts and every time cofiguration changes webframe and  toolbar are rendered
@@ -35,6 +37,14 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
         myWebView.setInitialScale(1);
         myWebView.getSettings().setLoadWithOverviewMode(true);
         myWebView.getSettings().setUseWideViewPort(true);
+
+        myWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url){
+                return false;
+            }
+        });
+
         myWebView.loadUrl("http://runko.herokuapp.com");
     }
 
@@ -51,6 +61,7 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
         inflater.inflate(R.menu.main_activity_action, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
 
     /**
      * Returns view on selected activity bar's menu items
@@ -80,7 +91,7 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
                 //puuttuu
                 return true;
             case R.id.action_ilmoitukset:
-                //puuttuu
+                myWebView.loadUrl("https://runko.herokuapp.com/content/fancyform");
                 return true;
             case R.id.action_luo_sisalto:
                 myWebView.loadUrl("https://runko.herokuapp.com/content/simpleform");
