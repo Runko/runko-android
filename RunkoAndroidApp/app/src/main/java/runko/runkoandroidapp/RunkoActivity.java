@@ -1,19 +1,13 @@
 package runko.runkoandroidapp;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.webkit.WebView;
-import android.view.Display;
-import android.view.WindowManager;
-import android.content.Context;
 import android.webkit.WebViewClient;
-import android.widget.LinearLayout;
-import android.widget.SpinnerAdapter;
-import android.widget.ArrayAdapter;
+
 
 public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
 
@@ -45,7 +39,7 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
             }
         });
         myWebView.getSettings().setJavaScriptEnabled(true);
-        myWebView.loadUrl("http://runko.herokuapp.com");
+        myWebView.loadUrl(getString(R.string.link_runko));
     }
 
     /**
@@ -76,40 +70,28 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
 
         switch (item.getItemId()) {
             case R.id.action_main_window:
-                myWebView.loadUrl("http://runko.herokuapp.com/frontpage");
+                myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_frontpage));
                 return true;
-            case R.id.action_suosikit:
-                //puuttuu...
+            case R.id.action_RUNKO_sisalto:
+                myWebView.loadUrl(getString(R.string.link_runko));
                 return true;
-            case R.id.action_tilaukset:
-                //puuttuu...
-                return true;
-            case R.id.action_haku:
-                //puuttuu...
-                return true;
-            case R.id.action_tallennukset:
-                //puuttuu
-                return true;
-            case R.id.action_ilmoitukset:
-                myWebView.loadUrl("https://runko.herokuapp.com/content/fancyform");
+            case R.id.action_kirjanmerkit:
+                myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_bookmark));
                 return true;
             case R.id.action_luo_sisalto:
-                myWebView.loadUrl("https://runko.herokuapp.com/content/simpleform");
+                myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_simpleform));
                 return true;
             case R.id.action_luo_alue:
-                myWebView.loadUrl("https://runko.herokuapp.com/area/areaform");
+                myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_areaform));
                 return true;
-            case R.id.action_omat_sisallot:
-                myWebView.loadUrl("http://runko.herokuapp.com/persons/CM");
+            case R.id.action_sisallon_hallinta:
+                myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_content_manager));
                 return true;
             case R.id.action_sign_in:
-                myWebView.loadUrl("https://runko.herokuapp.com/login");
+                myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_login));
                 return true;
             case R.id.action_profile:
-                myWebView.loadUrl("http://runko.herokuapp.com/persons/profile");
-                return true;
-            case R.id.action_settings:
-                //puuttuu...
+                myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_profile));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

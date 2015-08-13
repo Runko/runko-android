@@ -13,20 +13,12 @@
         runkoapp:showAsAction="always" >
         <menu>
             <item
-                android:id="@+id/action_suosikit"
-                android:title="@string/action_suosikit"
+                android:id="@+id/action_RUNKO_sisalto"
+                android:title="@string/action_RUNKO_sisalto"
                 runkoapp:showAsAction="never"/>
             <item
-                android:id="@+id/action_tilaukset"
-                android:title="@string/action_tilaukset"
-                runkoapp:showAsAction="never"/>
-            <item
-                android:id="@+id/action_haku"
-                android:title="@string/action_haku"
-                runkoapp:showAsAction="never"/>
-            <item
-                android:id="@+id/action_tallennukset"
-                android:title="@string/action_tallennukset"
+                android:id="@+id/action_kirjanmerkit"
+                android:title="@string/action_kirjanmerkit"
                 runkoapp:showAsAction="never"/>
         </menu>
     </item>
@@ -37,21 +29,18 @@
         runkoapp:showAsAction="always" >
         <menu>
             <item
-                android:id="@+id/action_ilmoitukset"
-                android:title="@string/action_ilmoitukset"
-                runkoapp:showAsAction="never"/>
-            <item
                 android:id="@+id/action_luo_sisalto"
-                android:title="@string/action_luo_sisalto"
+                android:title="@string/action_luo_mobiili_sisalto"
                 runkoapp:showAsAction="never"/>
             <item
                 android:id="@+id/action_luo_alue"
                 android:title="@string/action_luo_alue"
                 runkoapp:showAsAction="never"/>
             <item
-                android:id="@+id/action_omat_sisallot"
-                android:title="@string/action_omat_sisällöt"
+                android:id="@+id/action_sisallon_hallinta"
+                android:title="@string/action_sisallon_hallinta"
                 runkoapp:showAsAction="never"/>
+
         </menu>
     </item>
 
@@ -67,10 +56,6 @@
             <item
                 android:id="@+id/action_profile"
                 android:title="@string/action_profile"
-                runkoapp:showAsAction="never"/>
-            <item
-                android:id="@+id/action_settings"
-                android:title="@string/action_settings"
                 runkoapp:showAsAction="never"/>
         </menu>
     </item>
