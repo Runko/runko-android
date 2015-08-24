@@ -17,9 +17,9 @@
     <string name="action_kirjanmerkit">Kirjanmerkit</string>
     <string name="action_sisallon_hallinta">Sisällön hallinta</string>
 
-    <string name="link_runko">http://runko.herokuapp.com</string>
+    <string name="link_runko">http://runko-2.herokuapp.com</string>
     <string name="link_frontpage">/frontpage</string>
-    <string name="link_simpleform">/content/simpleform</string>
+    <string name="link_contentform">/content/contentform</string>
     <string name="link_areaform">/area/areaform</string>
     <string name="link_content_manager">/persons/CM</string>
     <string name="link_login">/login</string>

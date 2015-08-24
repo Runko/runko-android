@@ -8,11 +8,17 @@ import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import java.io.File;
+
 
 public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
 
     private WebView myWebView;
+    // NOTE: the content of this path will be deleted
+    //       when the application is uninstalled (Android 2.2 and higher)
+    protected File extStorageAppBasePath;
 
+    protected File extStorageAppCachePath;
 
     /**
      * When application starts and every time cofiguration changes webframe and  toolbar are rendered
@@ -79,7 +85,7 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
                 myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_bookmark));
                 return true;
             case R.id.action_luo_sisalto:
-                myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_simpleform));
+                myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_contentform));
                 return true;
             case R.id.action_luo_alue:
                 myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_areaform));
