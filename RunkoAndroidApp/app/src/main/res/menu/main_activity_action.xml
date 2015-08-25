@@ -20,6 +20,14 @@
                 android:id="@+id/action_kirjanmerkit"
                 android:title="@string/action_kirjanmerkit"
                 runkoapp:showAsAction="never"/>
+        <!--    <item
+                android:id="@+id/action_offline_files"
+                android:title="@string/action_offline_files"
+                runkoapp:showAsAction="never"/>
+            <item
+                android:id="@+id/action_save"
+                android:title="@string/action_save"
+                runkoapp:showAsAction="never"/>-->
         </menu>
     </item>
 

@@ -1,10 +1,14 @@
 package runko.runkoandroidapp;
 
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -21,7 +25,7 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
     protected File extStorageAppCachePath;
 
     /**
-     * When application starts and every time cofiguration changes webframe and  toolbar are rendered
+     * When application starts and every time configuration changes web frame and  toolbar are rendered
      * @param savedInstanceState
      */
     @Override
@@ -36,15 +40,19 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
         myWebView.setPadding(0, 0, 0, 0);
         myWebView.setInitialScale(1);
         myWebView.getSettings().setLoadWithOverviewMode(true);
+        /* only portrait view */
         myWebView.getSettings().setUseWideViewPort(true);
-
+        /* prevent opening browser */
         myWebView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 return false;
             }
         });
+        
         myWebView.getSettings().setJavaScriptEnabled(true);
+
+
         myWebView.loadUrl(getString(R.string.link_runko));
     }
 
@@ -99,6 +107,10 @@ public class RunkoActivity extends android.support.v7.app.ActionBarActivity{
             case R.id.action_profile:
                 myWebView.loadUrl(getString(R.string.link_runko)+getString(R.string.link_profile));
                 return true;
+           /* case R.id.action_offline_files:
+                return true;
+            case R.id.action_save:
+                return true;*/
             default:
                 return super.onOptionsItemSelected(item);
         }
