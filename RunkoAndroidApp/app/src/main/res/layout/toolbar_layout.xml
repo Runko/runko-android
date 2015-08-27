@@ -6,7 +6,7 @@
     android:layout_height="60dp"
     android:layout_width="match_parent"
     android:minHeight="?attr/actionBarSize"
-    android:background="#ff0800a3">
+    android:background="#a9ce6c">
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"

@@ -3,7 +3,7 @@
     xmlns:runkoapp="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/action_main_window"
-        android:icon="@drawable/rabbit50"
+        android:icon="@drawable/runko"
         android:title="@string/app_name"
         runkoapp:showAsAction="always" />
 
@@ -32,7 +32,7 @@
     </item>
 
     <item android:id="@+id/action_manager"
-        android:icon="@drawable/manager"
+        android:icon="@drawable/pencil"
         android:title="@string/action_manager"
         runkoapp:showAsAction="always" >
         <menu>
